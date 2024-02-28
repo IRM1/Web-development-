@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css\main.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Feedback Form</h1>
+    </div>
+    <form action="scripts\process.php" method="post">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" />
+      </div>
+      <div>
+        <label>Gender:</label><br />
+        <div>
+          <input type="radio" id="male" name="gender" value="Male" />
+          <label for="male">Male</label>
+        </div>
+        <div>
+          <input type="radio" id="female" name="gender" value="Female" />
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <div>
+        <label>Status:</label><br />
+        <div>
+          <input type="radio" id="freshmen" name="status" value="Freshmen" />
+          <label for="freshmen">Freshmen</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="sophomores"
+            name="status"
+            value="Sophomores"
+          />
+          <label for="sophomores">Sophomores</label>
+        </div>
+        <div>
+          <input type="radio" id="juniors" name="status" value="Juniors" />
+          <label for="juniors">Juniors</label>
+        </div>
+        <div>
+          <input type="radio" id="seniors" name="status" value="Seniors" />
+          <label for="seniors">Seniors</label>
+        </div>
+      </div>
+      <div>
+        <label>Major:</label><br />
+        <div>
+          <input
+            type="radio"
+            id="computerScience"
+            name="major"
+            value="Computer Science"
+          />
+          <label for="computerScience">Computer Science</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="electricalEngineering"
+            name="major"
+            value="Electrical Engineering"
+          />
+          <label for="electricalEngineering">Electrical Engineering</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="mathematics"
+            name="major"
+            value="Mathematics"
+          />
+          <label for="mathematics">Mathematics</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="mechanicalEngineering"
+            name="major"
+            value="Mechanical Engineering"
+          />
+          <label for="mechanicalEngineering">Mechanical Engineering</label>
+        </div>
+      </div>
+      <div>
+        <label>Interests:</label><br />
+        <div>
+          <input
+            type="checkbox"
+            id="campusAffiliations"
+            name="interests[]"
+            value="Campus Affiliations"
+          />
+          <label for="campusAffiliations">Campus Affiliations</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="mathClub"
+            name="interests[]"
+            value="Math Club"
+          />
+          <label for="mathClub">Math Club</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="codingClub"
+            name="interests[]"
+            value="Coding Club"
+          />
+          <label for="codingClub">Coding Club</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="sportsClub"
+            name="interests[]"
+            value="Sports Club"
+          />
+          <label for="sportsClub">Sports Club</label>
+        </div>
+      </div>
+      <button class="ok" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
