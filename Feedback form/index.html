@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character set declaration -->
     <meta charset="UTF-8" />
+    <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the document -->
     <title>Document</title>
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="css\main.css" />
   </head>
   <body>
+    <!-- Main container for the title -->
     <div class="main">
+      <!-- Heading for the form -->
       <h1>Feedback Form</h1>
     </div>
+    <!-- Form section starts here -->
     <form action="scripts\process.php" method="post">
+      <!-- Input field for name -->
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" />
       </div>
+      <!-- Input field for email -->
       <div>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" />
       </div>
+      <!-- Input field for phone number -->
       <div>
         <label for="phoneNumber">Phone Number:</label>
         <input type="tel" id="phoneNumber" name="phoneNumber" />
       </div>
+      <!-- Radio buttons for gender selection -->
       <div>
         <label>Gender:</label><br />
         <div>
@@ -34,6 +45,7 @@
           <label for="female">Female</label>
         </div>
       </div>
+      <!-- Radio buttons for academic status -->
       <div>
         <label>Status:</label><br />
         <div>
@@ -41,12 +53,7 @@
           <label for="freshmen">Freshmen</label>
         </div>
         <div>
-          <input
-            type="radio"
-            id="sophomores"
-            name="status"
-            value="Sophomores"
-          />
+          <input type="radio" id="sophomores" name="status" value="Sophomores" />
           <label for="sophomores">Sophomores</label>
         </div>
         <div>
@@ -58,85 +65,49 @@
           <label for="seniors">Seniors</label>
         </div>
       </div>
+      <!-- Radio buttons for major selection -->
       <div>
         <label>Major:</label><br />
         <div>
-          <input
-            type="radio"
-            id="computerScience"
-            name="major"
-            value="Computer Science"
-          />
+          <input type="radio" id="computerScience" name="major" value="Computer Science" />
           <label for="computerScience">Computer Science</label>
         </div>
         <div>
-          <input
-            type="radio"
-            id="electricalEngineering"
-            name="major"
-            value="Electrical Engineering"
-          />
+          <input type="radio" id="electricalEngineering" name="major" value="Electrical Engineering" />
           <label for="electricalEngineering">Electrical Engineering</label>
         </div>
         <div>
-          <input
-            type="radio"
-            id="mathematics"
-            name="major"
-            value="Mathematics"
-          />
+          <input type="radio" id="mathematics" name="major" value="Mathematics" />
           <label for="mathematics">Mathematics</label>
         </div>
         <div>
-          <input
-            type="radio"
-            id="mechanicalEngineering"
-            name="major"
-            value="Mechanical Engineering"
-          />
+          <input type="radio" id="mechanicalEngineering" name="major" value="Mechanical Engineering" />
           <label for="mechanicalEngineering">Mechanical Engineering</label>
         </div>
       </div>
+      <!-- Checkboxes for selecting interests -->
       <div>
         <label>Interests:</label><br />
         <div>
-          <input
-            type="checkbox"
-            id="campusAffiliations"
-            name="interests[]"
-            value="Campus Affiliations"
-          />
+          <input type="checkbox" id="campusAffiliations" name="interests[]" value="Campus Affiliations" />
           <label for="campusAffiliations">Campus Affiliations</label>
         </div>
         <div>
-          <input
-            type="checkbox"
-            id="mathClub"
-            name="interests[]"
-            value="Math Club"
-          />
+          <input type="checkbox" id="mathClub" name="interests[]" value="Math Club" />
           <label for="mathClub">Math Club</label>
         </div>
         <div>
-          <input
-            type="checkbox"
-            id="codingClub"
-            name="interests[]"
-            value="Coding Club"
-          />
+          <input type="checkbox" id="codingClub" name="interests[]" value="Coding Club" />
           <label for="codingClub">Coding Club</label>
         </div>
         <div>
-          <input
-            type="checkbox"
-            id="sportsClub"
-            name="interests[]"
-            value="Sports Club"
-          />
+          <input type="checkbox" id="sportsClub" name="interests[]" value="Sports Club" />
           <label for="sportsClub">Sports Club</label>
         </div>
       </div>
+      <!-- Submit button for the form -->
       <button class="ok" type="submit">Submit</button>
     </form>
   </body>
 </html>
+
