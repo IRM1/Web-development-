@@ -1,74 +1,42 @@
 <?php
 
-
-include 'student.php';
+// Start or resume a session
 session_start();
 
-function validateInput($data)
-{
-    $errors = [];
-    // validating name, phone, email
-    if (empty($data['name'])) {
-        $errors[] = "Name is required.";
-    }
-    if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "email is required.";
-    }
-    if (empty($data['phoneNumber'])) {
-        $errors[] = "Phone Number is required.";
-    }
-    if (!isset($data['gender'])) {
-        $errors[] = "Gender is required.";
-    }
-    // validate gender
-    if (!isset($data['status'])) {
-        $errors[] = "Status is required.";
-    }
-    if (!isset($data['major'])) {
-        $errors[] = "Major is required.";
-    }
-    if (!isset($data['interests'])) {
-        $errors[] = "Interests are required required.";
-        return ($errors);
-    }
-
-    return ($errors);
-
-}
-
-$errors = validateInput($_POST);
-
-
-if (!empty($errors)) {
-    echo "Please fill in all the required fields<br />" . implode("<br />", $errors);
+// Check if the session variable 'userResponses' is set
+if (!isset($_SESSION['userResponses'])) {
+    // If not set, display a message and terminate the script
+    echo "No submission data found. Please submit the form";
     exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $student = new Student($_POST['name'], $_POST['email'], $_POST['phoneNumber'], $_POST['gender'], $_POST['status'], $_POST['interests'], $_POST['major']);
-    $student->setName(htmlspecialchars(filter_var($_POST['name'])));
-    $student->setEmail(htmlspecialchars(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL)));
-    $student->setPhoneNumber(htmlspecialchars(filter_var($_POST['phoneNumber'])));
-    $student->setGender(htmlspecialchars(filter_var($_POST['gender'])));
-    $student->setStatus(htmlspecialchars(filter_var($_POST['status'])));
-    $student->setMajor(htmlspecialchars(filter_var($_POST['major'])));
+// Retrieve user responses stored in the session
+$userResponses = $_SESSION['userResponses'];
+?>
 
-
-    $student->display();
-
-    $_SESSION['userResponses'] = [
-        'name' => $student->getName(),
-        'email' => $student->getEmail(),
-        'tel' => $student->getPhoneNumber(),
-        'gender' => $student->getGender(),
-        'status' => $student->getStatus(),
-        'interests' => $student->getInterests(),
-        'major' => $student->getMajor(),
-
-
-    ];
-
-
-
-}
-header('location: thankYou.php');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link to an external CSS file for styling -->
+    <link rel="stylesheet" href="../css/thank.css">
+</head>
+<body>
+    <!-- Display a thank you message -->
+    <h1>Thank you for your Feedback</h1>
+    <div>
+        <!-- Display user information retrieved from session -->
+        <p>Hello, <?php echo htmlspecialchars($userResponses['name']); ?></p>
+        <p>Email: </br> <?php echo htmlspecialchars($userResponses['email']); ?></p>
+        <p>Tel: </br> <?php echo htmlspecialchars($userResponses['tel']); ?></p>
+        <p>Gender: </br> <?php echo htmlspecialchars($userResponses['gender']); ?></p>
+        <p>Status: </br> <?php echo htmlspecialchars($userResponses['status']); ?></p>
+        <!-- Use implode to display interests array as a string -->
+        <p>Interest: </br> <?php echo htmlspecialchars(implode(" , </br>", $userResponses['interests'])); ?></p>
+        <p>Major: </br> <?php echo htmlspecialchars($userResponses['major']); ?></p>
+    </div>
+</body>
+</html>

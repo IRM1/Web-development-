@@ -1,55 +1,67 @@
+/* Sets the background color of the entire webpage */
 body {
   background-color: #7d7f7a;
 }
+
+/* Styles the <h1> heading elements */
 h1 {
-  display: flex;
-  justify-content: center;
-  color: white;
+  display: flex; /* Uses Flexbox for layout */
+  justify-content: center; /* Centers the heading horizontally */
+  color: white; /* Sets the text color to white */
 }
+
+/* Applies margin to <div> elements */
 div {
   margin: 10px;
 }
 
+/* Styles the <form> elements */
 form {
-  width: 80%;
-  padding: 20px;
-  border: 2px solid #000;
-  margin: 10px auto 0;
-  border-radius: 10px;
-  background-color: #c5cbbc;
-  height: 100%;
+  width: 80%; /* Sets the form width to 80% of its parent container */
+  padding: 20px; /* Adds padding inside the form */
+  border: 2px solid #000; /* Adds a solid black border */
+  margin: 10px auto 0; /* Centers the form horizontally and adds margin */
+  border-radius: 10px; /* Rounds the corners of the border */
+  background-color: #c5cbbc; /* Sets the background color */
+  height: 100%; /* Sets the form height to fill its container */
 }
+
+/* Styles the <label> elements */
 label {
-  font-size: large;
-  display: inline-block;
-  margin-bottom: 5px;
+  font-size: large; /* Increases the font size */
+  display: inline-block; /* Allows margin to be applied */
+  margin-bottom: 5px; /* Adds space below the label */
 }
+
+/* Styles text, telephone, and email input fields */
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
+  width: 100%; /* Makes input fields fill their parent container's width */
+  margin-bottom: 10px; /* Adds space below the input fields */
+  padding: 8px; /* Adds padding inside the input fields for better readability */
+  border: 1px solid #ddd; /* Sets the border color */
+  border-radius: 4px; /* Rounds the corners of the input fields */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
+/* Styles elements with the class "ok" (typically buttons) */
 .ok {
-  margin-top: 20px;
-  background-color: #8b957c;
-  border-radius: 5px;
-  color: rgb(248, 249, 250);
-  padding: 10px 15px;
-  margin-left: 17px;
+  margin-top: 20px; /* Adds space above the element */
+  background-color: #8b957c; /* Sets the background color */
+  border-radius: 5px; /* Rounds the corners */
+  color: rgb(248, 249, 250); /* Sets the text color */
+  padding: 10px 15px; /* Adds padding inside the element */
+  margin-left: 17px; /* Adds space to the left of the element */
 }
 
+/* Responsive design adjustments for screens narrower than 768px */
 @media screen and (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 10px; /* Reduces the padding of the body */
   }
 
   form {
-    padding: 10px;
+    padding: 10px; /* Reduces the padding inside the form */
   }
 }

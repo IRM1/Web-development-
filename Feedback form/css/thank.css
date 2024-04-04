@@ -1,25 +1,30 @@
+/* Sets the background color of the entire webpage */
 body {
   background-color: #7d7f7a;
 }
+
+/* Styles for the main heading (h1) */
 h1 {
-  display: flex;
-  justify-content: center;
-  color: rgb(248, 240, 240);
+  display: flex; /* Uses Flexbox to enable flexible box layouts */
+  justify-content: center; /* Centers the heading horizontally within its container */
+  color: rgb(248, 240, 240); /* Sets the text color to a light shade of white */
 }
 
+/* General styles for div elements */
 div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 40%;
-  margin: 0 auto;
-  background-color: #c5cbbc;
-  border-radius: 10px;
+  display: flex; /* Enables Flexbox layout, allowing for a flexible and efficient way to layout, align, and distribute space among items in a container */
+  flex-direction: column; /* Stacks the flex items vertically */
+  align-items: center; /* Centers the flex items on the cross-axis (horizontally) */
+  justify-content: center; /* Centers the flex items on the main-axis (vertically), useful for centering content within the div */
+  text-align: center; /* Aligns text inside the div to the center */
+  width: 40%; /* Sets the width of the div to 40% of its parent container */
+  margin: 0 auto; /* Centers the div horizontally within its parent container */
+  background-color: #c5cbbc; /* Sets the background color of the div */
+  border-radius: 10px; /* Rounds the corners of the div */
 }
 
+/* Styles for paragraphs (p) within div elements */
 div p {
-  margin: 10px 0;
-  font-size: 20px;
+  margin: 10px 0; /* Sets the top and bottom margins of paragraphs to 10px, with no left or right margin */
+  font-size: 20px; /* Sets the font size of the paragraph text to 20px */
 }

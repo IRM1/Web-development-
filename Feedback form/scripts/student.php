@@ -1,7 +1,9 @@
 <?php
 
+// Define a class named Student to represent student information
 class Student
 {
+    // Declare private properties for the Student class
     private $name;
     private $email;
     private $phoneNumber;
@@ -10,9 +12,10 @@ class Student
     private $major;
     private $interests;
 
-
+    // Constructor method to initialize a new instance of the Student class
     public function __construct($name = "", $email = "", $phoneNumber = "", $gender = "", $status = "", $interests = "", $major = "")
     {
+        // Initialize each property with the values passed to the constructor
         $this->name = $name;
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
@@ -21,6 +24,8 @@ class Student
         $this->major = $major;
         $this->interests = $interests;
     }
+
+    // Getter methods to return the value of each private property
     public function getName()
     {
         return $this->name;
@@ -56,7 +61,7 @@ class Student
         return $this->major;
     }
 
-
+    // Setter methods to update the value of each private property
     public function setName($name)
     {
         $this->name = $name;
@@ -92,10 +97,10 @@ class Student
         $this->major = $major;
     }
 
-
+    // Method to display student information
     function display()
     {
-
+        // Output each property value, with interests joined by a comma and line break
         echo $this->name . "</br>";
         echo $this->email . "</br>";
         echo $this->phoneNumber . "</br>";
@@ -105,5 +110,3 @@ class Student
         echo implode(" , </br>", $this->interests);
     }
 }
-
-
