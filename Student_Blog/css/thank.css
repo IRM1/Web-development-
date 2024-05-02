@@ -1,0 +1,36 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #b3ceeb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+blockquote p {
+    display: inline;
+}
+
+
+img {
+    max-width: 100%; /* Ensures the image is responsive and does not overflow the container */
+    height: auto;
+    display: block; /* Center the image in the section */
+    margin: 0 auto;
+}
